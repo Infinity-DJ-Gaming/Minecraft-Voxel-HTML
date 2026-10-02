@@ -1,30 +1,28 @@
-# Minecraft Browser Sandbox — v1.2.0
+# Minecraft Browser Sandbox — v1.3.0
 
-## GitHub Pages
-
-Replace your repository's **index.html** with the updated **index.html** (or rename Minecraft.html to index.html). Keep your extracted **SFX** folder beside it:
+Replace your GitHub Pages **index.html** with this update. Keep the extracted **SFX** folder and upload your supplied **Music** folder beside it:
 
 ```text
 index.html
 README.md
-SFX/
-  ambient/
-  block/
-  dig/
-  mob/
-  random/
-  step/
-  …other original sound subfolders
+SFX/                 # original sound subfolders
+Music/
+  music/
+    game/            # creative, end, nether, water, etc.
+    menu/
+  records/
 ```
 
-Keep every original sound filename and subfolder unchanged. The default sound path is **SFX/**; no ZIP is needed. Commit the update, reload your site, then click **Options → Test sound**. Sounds start after you interact with the page.
+Keep all original filenames and subfolders. No ZIP is required. Icons and game code are embedded in the HTML. Reload the site after uploading; audio begins after a click or keypress. **Options** has independent music/sound toggles, volumes, tests and local folder pickers.
 
-## Updates & controls
+**v1.3:** Elytra, End ships, rocket boosts, durable armor, Netherite upgrades, enchanting/anvil/smithing stations, 17 enchantments, spears, credits, automatic music, mineshafts, biome village styles, rarer Nether structures, varied piglin trades, supplied icons and matching 3D held items. Earlier features remain. Open **Patch notes** for the complete history.
 
-Open **Patch notes** from the title screen or pause menu for v1.2.0 and the earlier Adventure Update: all 2,728 sounds indexed, custom keybinds, Creative double-jump flight, better crafting, Nether ores/fortresses/bastions/mobs, outposts, more biomes, brewing, strongholds and the End boss fight.
+**Controls:** WASD moves, Space jumps, E opens inventory, Esc pauses. Left-click mines/attacks; right-click places/uses. Change keys in Options. Creative double-jump toggles flight. Equip Elytra in the chest slot, press Jump airborne to glide, and use rockets to boost. Spears jab with left-click and charge while moving with right-click held. Shift-click transfers/equips items. The inventory’s book button toggles recipes/item search.
 
-Move with **WASD**, jump with **Space**, open inventory with **E**, and pause with **Esc**. Change keys and sound volume in **Options**. Wooden tools accept any mixed planks; crafting tables use a visible 3×3 grid.
+**Worlds:** creation settings include difficulty, cheats, Keep Inventory, Superflat, bonus chest and generation rules. **Edit** or pause → World settings changes names, mode and rules. Delete has a recovery copy and a restore button. Seed/terrain type stay fixed after creation.
 
-Existing saves stay compatible. Export a world backup from the pause menu before updating. New biomes appear farther from spawn; mechanics are simplified in this browser recreation.
+**Saves:** browser worlds and imported v1 backups upgrade automatically, preserving builds, items, stations and progress. New backups retain enchantments, durability and rules. Older worlds retain their terrain/landmarks and gain exploration sites. Keep the same browser/site address for browser saves; use exported backups to move devices or URLs. Export before updating.
 
-For local play, keep SFX beside the HTML or use **Options → Choose local sound folder**. The optional ZIP picker still works. **Minecraft-source.zip** contains editable code; sounds are supplied separately. Add each future update to the start of `releases.js` to update the version and preserve earlier notes.
+This remains a simplified recreation: flight physics, structures, enchanting offers, anvil costs and spear timings approximate Minecraft. Holding gold to pacify piglins is your custom rule. Official references: [Elytra](https://www.minecraft.net/en-us/article/taking-inventory--elytra), [spears](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-11), [piglins](https://www.minecraft.net/en-us/article/meet-piglins).
+
+**Minecraft-source.zip** contains editable modules; audio is separate. Prepend future releases in `releases.js`, preserve block IDs, and extend `saves.js` for migrations.

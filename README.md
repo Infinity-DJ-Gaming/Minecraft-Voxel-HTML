@@ -1,22 +1,30 @@
-# Minecraft Browser Sandbox — Adventure Update
+# Minecraft Browser Sandbox — v1.2.0
 
-## GitHub Pages setup
+## GitHub Pages
 
-1. Rename **Minecraft.html** to **index.html**, replacing your old game HTML.
-2. Put **SFX.zip** beside index.html in your Pages repository. Keep the ZIP and all sound names unchanged; no extraction is needed.
-3. Commit and push both files, then reload your site. **Options → Test sound** should show **2,728 original sound files**. Clicking the page enables audio.
+Replace your repository's **index.html** with the updated **index.html** (or rename Minecraft.html to index.html). Keep your extracted **SFX** folder beside it:
 
-SFX.zip is about **87 MiB**. Use GitHub Desktop or `git push`: GitHub's [browser uploader allows only 25 MiB per file](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+```text
+index.html
+README.md
+SFX/
+  ambient/
+  block/
+  dig/
+  mob/
+  random/
+  step/
+  …other original sound subfolders
+```
 
-## What's new
+Keep every original sound filename and subfolder unchanged. The default sound path is **SFX/**; no ZIP is needed. Commit the update, reload your site, then click **Options → Test sound**. Sounds start after you interact with the page.
 
-- **Options → Controls / change keys** remaps controls. Conflicts swap; Escape cancels.
-- Creative: **press Jump twice quickly** to toggle flight. Jump rises, Ctrl descends; F also toggles flight by default.
-- Visible **2×2 / 3×3 crafting grids**. Wooden tools accept **any wood, including mixed planks**. Shift-click a recipe for a batch, then select **Craft all**.
-- New biomes, pillager outposts, Nether gold/quartz ores, fortresses, bastions, ghasts, blazes and piglins.
-- Brew up to three water bottles with Nether wart, then a potion ingredient. Blaze powder fuels the stand.
-- Craft **Eyes of Ender** from pearls and blaze powder. Follow them to a stronghold; fill its **12 portal frames**. Destroy End crystals, defeat the dragon and return through the exit portal.
+## Updates & controls
 
-Existing saves remain compatible. Export a backup from the pause menu before replacing your HTML. New biomes appear farther from spawn. Structures and mechanics are simplified in this browser recreation.
+Open **Patch notes** from the title screen or pause menu for v1.2.0 and the earlier Adventure Update: all 2,728 sounds indexed, custom keybinds, Creative double-jump flight, better crafting, Nether ores/fortresses/bastions/mobs, outposts, more biomes, brewing, strongholds and the End boss fight.
 
-For local play, open the HTML and use **Options → Choose local sound ZIP**. **Minecraft-source.zip** contains editable code; sounds are supplied separately.
+Move with **WASD**, jump with **Space**, open inventory with **E**, and pause with **Esc**. Change keys and sound volume in **Options**. Wooden tools accept any mixed planks; crafting tables use a visible 3×3 grid.
+
+Existing saves stay compatible. Export a world backup from the pause menu before updating. New biomes appear farther from spawn; mechanics are simplified in this browser recreation.
+
+For local play, keep SFX beside the HTML or use **Options → Choose local sound folder**. The optional ZIP picker still works. **Minecraft-source.zip** contains editable code; sounds are supplied separately. Add each future update to the start of `releases.js` to update the version and preserve earlier notes.

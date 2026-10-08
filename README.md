@@ -1,40 +1,17 @@
-# Minecraft Browser Sandbox — v1.4.0
+# Minecraft Browser Sandbox · 1.5.0
 
-Replace your GitHub Pages **index.html** with the update. Keep your extracted assets beside it, with original filenames and subfolders:
+Upload **index.html** to GitHub Pages. Keep your extracted **SFX/** and **Music/** folders beside it, preserving their original filenames and subfolders. Icons, fonts and the game code are embedded in the HTML.
 
-```text
-index.html
-README.md
-SFX/
-Music/
-  music/game/
-  music/menu/
-  records/
-```
+This update adds Firebase accounts, friends and direct messages; optional online voice; live server roles/settings; targeted commands with Tab completion; improved pixel visuals and held-item grips; crouching/PvP fixes; Elytra drag and air sounds; particles; and broader terrain/structure generation. Full patch notes are in the game.
 
-Pixel icons and libraries are built into index.html. No sound ZIP is required. Audio starts after a click or key press. Options has music/sound toggles, volumes and local folder selection.
+**Accounts need a one-time Firebase setup:** follow **FIREBASE-SETUP.md** and publish the included **firestore.rules**. Your public Firebase configuration and automatic TURN relay are already included.
 
-## Multiplayer
+Host a saved world in **Multiplayer** and share its eight-character room code. Everyone needs version 1.5. Keep the host’s game open. Voice is available in Online rooms over HTTPS after enabling the microphone.
 
-1. Create a singleplayer world or use an existing save.
-2. Open **Multiplayer**, choose **Online / same Wi-Fi**, select a world, then **Host selected world**.
-3. Copy the eight-character code or invite link. Friends open the same updated website, choose Multiplayer, enter the code and click **Join room**. Everyone needs v1.4.
-4. Keep the host’s game open. **T** opens chat; **Tab** opens players and invites. `/msg Name message` whispers; `/players` opens the list; `/spawn` returns to spawn.
+**Controls:** WASD move · Space jump · Shift crouch · R sprint · E inventory · T chat · Tab complete commands / open players · F5 cycle cameras · V push to talk · Esc menu. Change keys in Options. Browser/OS shortcuts such as Ctrl+W cannot be guaranteed to stay captured.
 
-Online uses PeerJS signaling and WebRTC. Some networks need a TURN relay; Advanced connection settings supports your own relay or signaling server. **Local tabs** connects tabs of the same site in the same browser; use Online for other devices.
+Examples: `/give @s diamond_sword 1`, `/gamemode Test_Friend creative`, `/tp @a @s`, `/role Test_Friend operator`. Replace spaces in player names with underscores. World cheats or room operator permission are required for modifying commands.
 
-Rooms include passwords, 2/4/8-player limits, shared terrain, creatures, drops and containers, optional PvP, building permissions, friend bookmarks, mute and host kick controls. The host leads dimension travel. Shared containers lock while another player uses them. Keep the host’s tab active for the best performance; browsers can slow background tabs.
+Existing browser saves and imported backups remain compatible. Export a backup before updating and keep the same website address to retain browser saves. Old worlds preserve their original terrain; create a new world for the revised caves, villages and regional structures. Friends/account data use Firebase; worlds stay on the device.
 
-## Profiles and controls
-
-Use the bottom-left **Profile** button or **Options → Account / profile settings** to rename your player, change colors, import a 64 × 64 PNG skin, or manage/export profiles. Profiles are local display identities, not Microsoft/Mojang accounts. Connected players can change appearance but cannot switch profiles mid-room.
-
-**WASD** move · **Space** jump · **Shift** sprint · **C** descend in Creative · double Space or **F** fly · **E** inventory · **Q** drop · **M** map · **1–9** hotbar · **Escape** menu. **F5** cycles first person, behind and front views. Rebind controls in Options.
-
-F5 refresh and delivered browser shortcuts are intercepted while playing. **Fullscreen & keyboard protection** requests Keyboard Lock where supported. A website cannot guarantee blocking reserved browser or OS shortcuts such as Ctrl+W in every browser.
-
-## Saves and patch notes
-
-Browser saves and imported 1.0–1.3 backups migrate while preserving terrain, builds, equipment and progress. The host saves the shared world and each guest’s separate inventory. Rejoin with the same device profile to restore your items. Guests can **Save a local world copy**, including after the host disconnects. Export world backups and profiles before moving devices.
-
-In-game **Patch notes** includes v1.4 and earlier releases: Nether and End progression, crafting, Elytra, armor, enchantments, spears, music and world settings. `Minecraft-source.zip` contains editable source and library licenses; SFX and Music remain separate.
+This is an independent, simplified voxel recreation. **Minecraft-source.zip** contains editable source and library licenses. It excludes your large sound/music folders; keep using the folders already in your repository.
